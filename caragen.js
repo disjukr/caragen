@@ -19,10 +19,10 @@ caragen.character = [
     '{hairStyle} {job} {mankind}',
     '{hairStyle} {fashion}',
     '{color}머리 {fashion}',
-    '{coloredHairstyle} {fashion}',
-    '{coloredHairstyle} {job}',
-    '{coloredHairstyle} {mankind}',
-    '{coloredHairstyle} {job} {mankind}',
+    '{coloredHairStyle} {fashion}',
+    '{coloredHairStyle} {job}',
+    '{coloredHairStyle} {mankind}',
+    '{coloredHairStyle} {job} {mankind}',
     '{color}{fashion} {mankind}',
     '{fashion} {job}',
     '{fashion} {job} {mankind}',
@@ -30,7 +30,7 @@ caragen.character = [
     '{dere} {job} {mankind}',
     '{dere} {fashion}'
 ];
-caragen.coloredHairstyle = [
+caragen.coloredHairStyle = [
     '{color}{hairStyle}'
 ];
 caragen.color = [

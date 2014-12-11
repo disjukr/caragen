@@ -2,24 +2,36 @@ if (typeof module !== 'undefined')
     module.exports = caragen;
 
 function caragen() {
-    var chooseOne = caragen.chooseOne;
-    var character = chooseOne(caragen.character);
-    return character.replace(/\{(.+?)\}/g, function (match, type) {
-        return chooseOne(caragen[type]);
-    });
+    return caragen.template(caragen.chooseOne(caragen.character));
 }
 caragen.chooseOne = function chooseOne(array) {
     return array[Math.floor(Math.random() * array.length)];
 };
+caragen.template = function template(string) {
+    return string.replace(/\{(.+?)\}/g, function (match, type) {
+        return caragen.template(caragen.chooseOne(caragen[type]));
+    });
+};
 caragen.character = [
-    '{color}머리 {fashion}',
     '{hairStyle} {mankind}',
-    '{color}{hairStyle} {job}',
-    '{color}{hairStyle} {mankind}',
+    '{hairStyle} {job}',
+    '{hairStyle} {mankind}',
+    '{hairStyle} {job} {mankind}',
+    '{hairStyle} {fashion}',
+    '{color}머리 {fashion}',
+    '{coloredHairstyle} {fashion}',
+    '{coloredHairstyle} {job}',
+    '{coloredHairstyle} {mankind}',
+    '{coloredHairstyle} {job} {mankind}',
+    '{color}{fashion} {mankind}',
     '{fashion} {job}',
     '{fashion} {job} {mankind}',
     '{dere} {mankind}',
+    '{dere} {job} {mankind}',
     '{dere} {fashion}'
+];
+caragen.coloredHairstyle = [
+    '{color}{hairStyle}'
 ];
 caragen.color = [
     '하얀 ',

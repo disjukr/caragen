@@ -1,0 +1,12 @@
+{
+  "name": "caragen",
+  "version": "1.0.0",
+  "description": "랜덤 캐릭터 문자열 생성",
+  "main": "caragen.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/disjukr/caragen.git"
+  },
+  "author": "JongChan Choi",
+  "license": "Zlib"
+}
